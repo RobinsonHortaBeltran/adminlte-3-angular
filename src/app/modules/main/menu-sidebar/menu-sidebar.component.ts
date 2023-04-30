@@ -38,13 +38,13 @@ export const MENU = [
         path: ['/']
     },
     {
-        name: 'Blank',
+        name: 'Clientes',
         iconClasses: 'fas fa-file',
-        path: ['/blank']
+        path: ['/client']
     },
     {
         name: 'Main Menu',
-        iconClasses: 'fas fa-folder',        
+        iconClasses: 'fas fa-folder',
         children: [
             {
                 name: 'Sub Menu',

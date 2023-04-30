@@ -12,6 +12,7 @@ import {ForgotPasswordComponent} from '@modules/forgot-password/forgot-password.
 import {RecoverPasswordComponent} from '@modules/recover-password/recover-password.component';
 import {MainMenuComponent} from '@pages/main-menu/main-menu.component';
 import {SubMenuComponent} from '@pages/main-menu/sub-menu/sub-menu.component';
+import { NuevoComponent } from '@pages/blank/nuevo/nuevo.component';
 
 const routes: Routes = [
     {
@@ -25,7 +26,7 @@ const routes: Routes = [
                 component: ProfileComponent
             },
             {
-                path: 'blank',
+                path: 'client',
                 component: BlankComponent
             },
             {
@@ -39,7 +40,11 @@ const routes: Routes = [
             {
                 path: '',
                 component: DashboardComponent
-            }
+            },
+            {
+              path:'client/new',
+              component:NuevoComponent,
+            },
         ]
     },
     {
@@ -62,6 +67,7 @@ const routes: Routes = [
         component: RecoverPasswordComponent,
         canActivate: [NonAuthGuard]
     },
+
     {path: '**', redirectTo: ''}
 ];
 

@@ -1,0 +1,73 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <div class="container-fluid">
+      <div class="row mb-2">
+          <div class="col-sm-6">
+              <h1>Registro de cliente</h1>
+          </div>
+          <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active">Registro de clientes</li>
+              </ol>
+          </div>
+      </div>
+  </div>
+  <!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <!-- Default box -->
+  <div class="container-fluid">
+      <div class="card border">
+
+          <div class="card-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <form [formGroup]="clientForms" (ngSubmit)="createClient(clientForms.value)">
+                      <div class="row">
+                        <div class="col">
+                          <label for="">Nombre</label>
+                          <input type="text" class="form-control" formControlName="name" placeholder="Ingrese el nombre" required>
+                        </div>
+                        <div class="col">
+                          <label for="">Apellido</label>
+                          <input type="text" class="form-control" formControlName="last_name" placeholder="Ingrese el apellido" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <label for="">Celular</label>
+                          <input type="text" class="form-control" formControlName="cellphone" placeholder="Ingrese el numero de celular" required>
+                        </div>
+                        <div class="col">
+                          <label for="">Direccion</label>
+                          <input type="text" class="form-control" formControlName="address" placeholder="Ingrese la direccion de residencia" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <label for="">Correo electronico</label>
+                          <input type="email" class="form-control"  formControlName="email" placeholder="Ingrese el correo electronico" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 mt-2">
+                          <button type="submit" class="btn btn-primary btn-lg btn-block">Registrar cliente</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <!-- /.card-body -->
+          <!-- <div class="card-footer">Footer</div> -->
+          <!-- /.card-footer-->
+      </div>
+  </div>
+  <!-- /.card -->
+</section>
+<!-- /.content -->
